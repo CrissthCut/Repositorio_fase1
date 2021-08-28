@@ -96,6 +96,7 @@ nueva_fecha = fecha_procesada + datetime.timedelta(days=+cant_dias)
 print(f"La nueva fecha es {nueva_fecha}")
 print(SEPARADOR)
 
+
 # Ejercicio SYSOS
 import sys
 import os
@@ -118,4 +119,158 @@ for raiz, dirs, archivos in os.walk(".", topdown=False): #Demostración de unpac
      print(os.path.join(raiz, nombre))
      
  
-# Ejercicios semana #2 
+ 
+# Ejercicios semana 2
+
+# Ejercicio_1
+factura = ['pan','huevos',100,1234]
+print(factura)
+
+
+# Ejercicio_2 
+factura = ['pan','huevos',100,1234]
+print(factura[0])
+
+
+# Ejercicio_3
+factura = ['pan','huevos',100,1234]
+print(factura[3])
+
+
+# Ejercicio_4
+factura = ['pan','huevos',100,1234]
+print(len(factura))
+
+
+# Ejercicio_5
+factura = ['pan','huevos',100,1234]
+print(len(factura)-1)
+
+
+# Ejercicio_6 
+factura = ['pan','huevos',100,1234]
+print(factura[-1])
+
+
+# Ejercicio_7
+'Escribir un programa que almacene las asignaturas de un curso (por ejemplo mates, fisica,quimica, historia y lengua) en una lista y la muetsre en la pantalla'
+materias = ["Matematicas", "Fisica", "Quimica","Historia", "Lengua"]
+print(materias)
+
+
+# Ejercicio_8
+print("5->", valores.count(5))
+
+
+# Ejercicio_9
+valores =("Python",True,"Zope",5)
+print(valores.index(True))
+print(valores.index(5))
+
+
+# Ejercicio_10
+tecnologias =('Zope','Plone','Pyramid')
+for i in range(0,len(tecnologias)):
+    print(i,tecnologias[i])
+
+
+# Ejercicio_11
+text = 'Python Programing'
+#get slice object to slice Python
+sliced_text = slice(6)
+print(text[sliced_text]) 
+
+
+# Ejercicio_12
+a = ("a","b","c","d","e","f","g","h")
+x = slice(0,8,3)
+print(a[x])
+
+
+# Ejercicio_13
+a = ("a","b","c","d","e","f","g","h")
+x = slice(3,5)
+print(a[x])
+
+
+# Ejercicio_14
+py_list = ["P","y","h","o","n"]
+py_tuple = ("P","y","h","o","n")
+
+#contains indices 0, 1 and 2
+slice_object = slice(3)
+print(py_list[slice_object])#['p','y','t']
+
+#contains indices 1 and 3
+slice_object = slice(1,5,2)
+print(py_tuple[slice_object])#('y','h')
+
+
+# Ejercicio_15 
+# contains indices 0, 1 and 2}
+py_string = 'Python'
+print = (py_string[0:3]) #Pyt
+
+#contins indices 1 and 3
+print(py_string[1:5:2])#yh
+
+
+# Ejercicio_16
+py_string = 'Python'
+
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+print(thisdict)
+
+
+# Ejercicio_17 
+#imprima el valor de marca 
+
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+print(thisdict["brand"])
+
+
+# Ejercicio_18
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964,
+    "year": 2020
+}
+print(thisdict)
+
+
+# Ejercicio_19
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964,
+    "year": 2020,
+    "color": "Black"
+}
+print(len(thisdict))
+
+
+# Ejercicio_20 
+thisset = {"apple","banana","cherry"}
+print(thisset)
+
+
+# Ejercicio_21
+thisset = {"apple","banana","cherry","apple"}
+print(thisset)
+
+
+# Ejercicio_22
+thisset = {"apple","banana","cherry","apple"}
+print(len(thisset))
+
+
+
