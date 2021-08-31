@@ -2,6 +2,101 @@
 Tercer semestre evidencia 1
 # Aplicar  las  estructuras  nativas  del  lenguaje  Python  tales  como  Listas,Tuplas,  Conjuntos  y  Diccionarios para almacenar en memoria principal el estado de una aplicación a desarrollar y emplearlas para codificar pilas y colas que permitan el proceso delosconjuntos de datos.
 
+# 1.- elevado a a 5ta potencia
+import math
+print(math.pow(2,5))
+
+
+# 2._Raiz cuadrada de 2
+import math
+print(math.sqrt(2)) 
+
+
+# 3._Longitud euclídea entre 3 y . Equivale a la longitud de la hipotenusa de un triangulo rectangulo de lados con longitud igual a 3 y 4
+import math
+print(math.hypo(3,4))
+
+
+# 4._Coseno del angulo de 2*pi radianes (180°)
+import math
+print(math.cos(2*math.pi))
+
+
+# 5._Imprime una letra de una lista de letras
+import random
+print(random.choice(['A','B','C','D','E','F']))
+
+
+# 6._Repite 14 veces una lista de frutas generada
+import random
+mylist=["apple","banana","cherry"]
+print(random.choices(mylist, weights[10,1,1], k=14))
+
+
+# 7._De una lista de frutas imprime la misma lista en orden diferente
+import random
+mylist=["apple","banana","cherry"]
+print(random.shuffle(mylist))
+print(mylist)
+
+
+# 8._De una lista de frutas regresa un ejemplo de 2 frutas de la lista
+import random
+mylist=["apple","banana","cherry"]
+print(random.sample(mylist))
+
+
+# 9._Imprime un numero aleatorio que este entre el 0 y 1
+import random
+print(random.random())
+
+
+# 10._Imprime el directorio actual
+import os
+mi_ubi=os.getcwd()
+print(mi_ubi)
+
+
+# 11._Imprime lista de directorios de la direccion actual
+import os
+print(os.listdir(os.getcwd()))
+
+
+# 12._Mostrar aviso de si existe un directorio
+import os
+print(os.path.exists("/Users/mediacenter"))
+
+
+# 13._Crea una carpeta llamada sistemas
+import os
+os.makerirs("Sistemas")
+
+
+#14._Mostrar la fecha y hora actual
+import datetime
+x= datetime.datetime.now()
+print(x)
+
+
+#15._Mostrar año y día
+import datetime
+x=datetime.datetime.now()
+print(x.year)
+print(x.strftime("%A"))
+ 
+ 
+# 16._Dada una fecha imprimirla en formato de fecha y hora
+import datatime
+x=datetime.datetime(2020,5,17)
+print(x)
+
+
+# 17._Dada una fecha imprime el nombre del mes
+import datetime
+x= datetime.datetime(2018,6,1)
+print(x.strftime("%B"))
+
+
 # Ejercicio Math
 import math
 SEPARADOR = ("*" * 20) + "\n"
@@ -271,6 +366,296 @@ print(thisset)
 # Ejercicio_22
 thisset = {"apple","banana","cherry","apple"}
 print(len(thisset))
+
+
+# Semana 2, mas ejercicios 
+
+#EJERCICIOS DE LISTAS
+SEPARADOR = ("*" * 20) + "\n"
+#Creación de listas
+#Lista vacía
+lista_vacia = list()
+otra_lista_vacia = []
+#Lista con elementos iniciales
+lista_uno = [1, 2, 3, 4]
+print(lista_uno)
+print(SEPARADOR)
+pass
+#Agregar elementos a listas existentes
+lista_uno.append(5)
+print(lista_uno)
+lista_uno.append((6, 7)) #Una lista puede ser un elemento de otra lista
+print(lista_uno)
+print(SEPARADOR)
+pass
+#Remover elementos de una lista
+lista_uno.remove((6, 7)) #Se le pasa el valor del elemento a remover
+print(lista_uno)
+print(SEPARADOR)
+pass
+#Ordenar elementos de una lista
+#sort()
+lista_original1 = [3, 4, 2]
+print(lista_original1)
+lista_original1.sort()
+print(lista_original1)
+pass
+#sorted()
+lista_original2 = [23, 10, 30, 5]
+lista_ordenada = sorted(lista_original2)
+print(f"lista original = {lista_original2}, y la version ordenada es {lista_ordenada}")
+print(SEPARADOR)
+pass
+#Comprension de listas
+print(f"lista original = {lista_uno}")
+#SIN comprensión de listas
+lista_uno_al_doble = []
+for valor in lista_uno:
+ lista_uno_al_doble.append(valor * 2)
+print(f"Lista resultante, cada elemento al doble = {lista_uno_al_doble}")
+pass
+#CON comprensión de listas
+lista_uno_al_doble = [valor * 2 for valor in lista_uno]
+print(f"Mismo resultado, pero con comprensión de listas = {lista_uno_al_doble}")
+pass
+#Comprensión de listas con condición
+lista_valores_pares = [valor for valor in lista_uno if (valor % 2 == 0)]
+print(f"Solamente se agregaron los elementos con valor par: {lista_valores_pares}")
+
+
+#EJERCICIO DE COLAS
+SEPARADOR = ("*" * 20) + "\n"
+cola = list() #Cola utilizando una lista
+for cantidad in range(5):
+ nuevo = input("Nombre del recién llegado: ")
+ cola.append(nuevo)
+print(f"Se agregaron {len(cola)}, elementos:")
+for elemento in cola:
+ print(elemento)
+print(SEPARADOR)
+pass #Hacer notar que los elementos permanecen en la cola
+print("Procedemos a retirarlos de la cola")
+while cola:
+ print(cola.pop(0))
+pass #Verificar que la estructura se encuentra vacia
+
+
+#Eliminar elementos de un diccionario
+print("*" * 20)
+del diccionario_citas["AMLO"]
+print(diccionario_citas)
+pass
+#Opciones para obtener el volcado de un diccionario,
+#en cada una, la respuesta DEBE convertirse a una lista primero
+#para un más fácil manejo
+#Opción 1 : Todas las claves, solamente las claves
+print(list(diccionario_citas.keys()))
+pass
+#Opción 2 : Todos los valores, solamente los valores
+print(list(diccionario_citas.values()))
+pass
+#Opción 3 : Todos los elementos, elemento por elemento
+print(list(diccionario_citas.items()))
+
+
+#EJEMPLO LISTAS ALEATORIAS ANIDADAS
+import random
+SEPARADOR = ("*" * 20) + "\n"
+#Creación de una lista con diez valores aleatorios entre 1 y 100
+lista = [random.randrange(1,101) for valor in range(10)]
+print(type(lista))
+print(f"El primer elemento es {lista[0]} y el último es {lista[9]}")
+print(type(lista))
+print(SEPARADOR)
+#Creación de una lista de cinco listas con diez elementos cada una
+lista_de_listas = [[random.randrange(1,101) for valor in range(10)] for valor in range(5)]
+print(lista_de_listas)
+print(f"El primer elemento es {lista_de_listas[0][0]} y el último es {lista_de_listas[4][9]}")
+#print(lista_de_listas[0][:])
+print(lista_de_listas[0])
+for lista_interna in lista_de_listas:
+ print(lista_interna[0])
+print(type(lista_de_listas))
+print("[")
+for lista_primer_nivel in lista_de_listas:
+ #print(f"lista interna: {lista_primer_nivel}")
+ print("[", end="")
+ for elemento in lista_primer_nivel:
+     print(f"{elemento}", end="\t")
+ print("]", end="")
+ print("")
+print("]")
+print(SEPARADOR)
+print(f"El elemento 0,2 es {lista_de_listas[0][2]}")
+print(f"El elemento 2,7 es {lista_de_listas[2][7]}")
+#print(lista_de_listas[0,4])#ESTO ES UN ERROR
+
+
+
+# Ejercicios semana 3
+
+# Ejercicio_1
+from multiprocessing import Queue
+import queue
+import random 
+
+queue_time = Queue
+
+print("Almacenamiento en queue..")
+for i in range(5):
+    random_time=random.randint(1,100)
+    queue_time.put(random_time)
+    print("%d added at queue" % random_time)
+print("leyendo de queue...")
+while not queue_time.empty():
+    time_read = queue_time.get()
+    print("%d read from queue" % time_read)
+    
+
+# Ejercicio_2 
+class Cola:
+    def __init__(self):
+        self.items =[]
+    
+    def estaVacia(self):
+        return self.items == []
+    
+    def agregar(self, item):
+        self.items.insert(0,item)
+        
+    def avanzar(self):
+        return self.items.pop()
+    
+    def tamano(self):
+        return len(self.items)
+    
+c = Cola() 
+
+c.agregar(4)
+c.agregar('perro')
+c.agregar(True) 
+print(c.tamano())
+
+print (c.estaVacia())
+c.agregar(8.4)
+print(c.avanzar())
+print(c.avanzar())
+print(c.avanzar())
+
+
+# Ejercicio_3 
+#Crer un menu para colas
+#creamos un alista vacia 
+
+cola = []
+#Creamos un menú con 4 colas
+def main():
+    print("1 Insertar cola")
+    print("2 Borra en cola")
+    print("3 Listar cola")
+    print("4 Salir")
+
+option = input("Elija una opcion: ")
+
+#Esta opción permite encolar el numero en la lista 
+if str(option)=="1":
+    elemento = input("Introduzca el número a encolar")
+    cola.append(elemento)
+    print("número encolado con exito")
+    main()
+    
+#Esta opcion saca de la lista el número en orden de ingreso 
+elif str(option) == "2":
+    if len(cola)>0:
+        print("El número: ",cola.pop(0),"fue desencolado")
+        main()
+    else:
+        print("Cola vacia")
+        main()
+    
+ # Esta opción imprime en pantalla la cola
+elif str(option) == "3":
+     for i in cola:
+         print("Cola vacia")
+         main=()
+         
+#Esta opcion permite salir de la ejecucion del codigo
+elif str(option)=="4":
+    exit()
+    
+else:
+    print("Selecciones una opcion valida.")
+    main()
+    
+main()
+
+
+# Ejercicio_4
+Crear una cola, imprimirla, después extraer el primer elemento de la izquierda y volver a imprimir la cola
+from collections import deque 
+cola = deque()
+cola = deque(['Hector','Juan','Miguel','Maria','Arnaldo']) 
+print(cola)
+print(cola.popleft()) 
+print(cola)
+
+
+# Ejercicio_5
+Crear una clase para representar la estructura de datos cola (queue) usando una lista
+class Cola:
+    def init (self): 
+        self.datos = []
+
+    def cantidad(self): 
+        return len(self.datos)
+
+    def insertar(self, dato): 
+        self.datos.insert(0, dato)
+
+    def extraer(self):
+        if self.cantidad():
+            return self.datos.pop() 
+        else:
+            return None
+
+    def primer_dato(self): 
+        if self.cantidad():
+            return self.datos[-1] 
+    
+    def ultimo_dato(self):
+        if self.cantidad():
+            return self.datos[0]
+
+numeros = Cola() 
+numeros.insertar(2) 
+numeros.insertar(3) 
+numeros.insertar(5) 
+numeros.insertar(7)
+
+print(numeros.primer_dato())   # 2
+print(numeros.ultimo_dato())   # 7
+print(numeros.cantidad()) # 4
+ 
+print()
+
+dato = numeros.extraer() 
+print(dato) # 2
+print(numeros.cantidad()) # 3 
+
+print()
+
+numeros.extraer() 
+numeros.extraer() 
+numeros.extraer() 
+print(numeros.cantidad()) # 0
+
+print()
+
+dato = numeros.extraer() 
+print(dato) # None
+
+    
+
 
 
 
