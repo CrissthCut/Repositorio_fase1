@@ -654,7 +654,121 @@ print()
 dato = numeros.extraer() 
 print(dato) # None
 
-    
+   
+# Ejercicios semana 4
+
+# Ejercicio 1
+class Stack: # Creamos la clase Stack def     init (self):
+self.items = []
+
+def is_empty(self): # Metodo para verificar si la pila esta vacia return self.items == []
+
+def push(self, item): # Metodo para insertar elementos a la pila self.items.insert(0, item)
+
+def pop(self): # Metodo para eliminar el ultimo elemento apilado return self.items.pop(0)
+
+def print_stack(self): # Metodo para mostrar los elementos de la pila print(self.items)
+
+
+pila = Stack() # Creamos una instancia de la pila
+#ingresamos algunos elementos a la pila pila.push('a')
+pila.push('b')
+pila.push('c')
+pila.print_stack() # Mostramos los elementos de la pila pila.pop() # Utilizamos el metodo pop
+pila.print_stack() # Mostramos nuevamente los elementos de la pila
+
+
+# Ejercicio 2
+pila = [3,4,5] 
+pila.append(6) 
+pila.append(7) 
+print(pila)
+
+
+# Ejercicio 3
+pila = [3,4,5] 
+pila.append(6) 
+pila.append(7) 
+print(pila)
+
+print(pila.pop()) 
+print(pila)
+
+
+# Ejercicio 4
+pila = [3,4,5] 
+pila.append(6) 
+pila.append(7)
+print(pila)
+
+numero = pila.pop() 
+print(numero)
+
+
+# Ejercicio 5
+class Pila:
+    def     init (self): self.items = []
+
+def estaVacia(self):
+    return self.items == []
+
+def incluir(self, item): 
+    self.items.insert(0,item)
+
+def extraer(self):
+    return self.items.pop(0)
+
+def inspeccionar(self):
+    return self.items[0]
+
+def tamano(self):
+    return len(self.items)
+
+s = Pila() 
+s.incluir('hola') 
+s.incluir('verdadero')
+
+print(s.extraer())
+
+
+# Ejercicio 6
+'''
+Demostración de implementación de pilas utilizando listas '''
+
+import collections 
+SEPARADOR = ("*" * 20) + "\n"
+
+pila_con_lista = list() 
+for i in range(5):
+    pila_con_lista.append(input("Dime el nombre a agregar: "))
+
+#Sacar elementos de la pila 
+while pila_con_lista:
+      print(pila_con_lista.pop()) 
+ 
+print(SEPARADOR)
+
+
+# Ejercicio 7
+'''
+Demostración de implementación de pilas utilizando deques
+'''
+
+import collections 
+SEPARADOR = ("*" * 20) + "\n"
+
+pila_deque = collections.deque() 
+for i in range(5):
+    pila_deque.append(input("Dime el nombre a agregar: "))
+
+#Sacar elementos de la pila 
+while pila_deque:
+      print(pila_deque.pop()) 
+pass
+
+
+
+
 
 
 
