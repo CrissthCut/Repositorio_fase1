@@ -931,6 +931,22 @@ print(p.mostrarelementos())
 
 
 # Ejercicio Pila 3
+from Pila_imp import Pila
+
+pila = Pila() # Creamos una instancia de la pila
+
+#ingresamos algunos elementos a la pila pila.apilar('a')
+pila.apilar('b')
+pila.apilar('c')
+print(pila.mostrarelementos()) # Mostramos los elementos de la pila 
+pila.desapilar() # Utilizamos el metodo pop
+print(pila.mostrarelementos()) # Mostramos nuevamente los elementos de la pila
+
+_---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------_
+
+# En total 68 problemas 
+# Ana Cristina Cavazos Oyervidez
+
 
 
 
