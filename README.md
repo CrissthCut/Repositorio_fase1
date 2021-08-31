@@ -2,7 +2,8 @@
 Tercer semestre evidencia 1
 # Aplicar  las  estructuras  nativas  del  lenguaje  Python  tales  como  Listas,Tuplas,  Conjuntos  y  Diccionarios para almacenar en memoria principal el estado de una aplicación a desarrollar y emplearlas para codificar pilas y colas que permitan el proceso delosconjuntos de datos.
 
-# 1.- elevado a a 5ta potencia
+# Ejercicios semana_1 (17)
+# 1.- #2 elevado a a 5ta potencia
 import math
 print(math.pow(2,5))
 
@@ -96,8 +97,10 @@ import datetime
 x= datetime.datetime(2018,6,1)
 print(x.strftime("%B"))
 
+_---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------_
 
-# Ejercicio Math
+# Ejercios semana 1 (5)
+# 1. Ejercicio Math
 import math
 SEPARADOR = ("*" * 20) + "\n"
 
@@ -125,7 +128,7 @@ pass
 print(f"El valor de Pi es {math.pi}")
 
 
-# Ejercicio Random
+# 2.Ejercicio Random
 import random
 SEPARADOR = ("*" * 20) + "\n"
 print(f"Obteniendo un numero entero aleatorio que puede ir del 0 al 19: {random.randrange(20)}")
@@ -142,7 +145,7 @@ random.shuffle(listaDePrueba)
 print(f"La lista ya 'perturbada/barajada' es {listaDePrueba}")
 
 
-# Ejercicio Time
+# 3.Ejercicio Time
 import time
 SEPARADOR = ("*" * 20) + "\n"
 segundos = int(input("Cantidad de segundos a esperar:\n"))
@@ -158,7 +161,7 @@ duracion = time.time() - horaInicial #Puede verse afectado si se cambia la hora 
 print(f"La duración del proceso simulado fue de {duracion} segundos")
 
 
-# Ejercicio Datetime
+# 4.Ejercicio Datetime
 import datetime
 import time
 SEPARADOR = ("*" * 20) + "\n"
@@ -192,7 +195,7 @@ print(f"La nueva fecha es {nueva_fecha}")
 print(SEPARADOR)
 
 
-# Ejercicio SYSOS
+# 5.Ejercicio SYSOS
 import sys
 import os
 SEPARADOR = ("*" * 20) + "\n"
@@ -214,8 +217,9 @@ for raiz, dirs, archivos in os.walk(".", topdown=False): #Demostración de unpac
      print(os.path.join(raiz, nombre))
      
  
- 
-# Ejercicios semana 2
+_---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------_
+
+# Ejercicios semana 2 (22)
 
 # Ejercicio_1
 factura = ['pan','huevos',100,1234]
@@ -368,9 +372,11 @@ thisset = {"apple","banana","cherry","apple"}
 print(len(thisset))
 
 
-# Semana 2, mas ejercicios 
+_---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------_
 
-#EJERCICIOS DE LISTAS
+# Ejercicios semana 2 (4)
+
+# 1.EJERCICIOS DE LISTAS
 SEPARADOR = ("*" * 20) + "\n"
 #Creación de listas
 #Lista vacía
@@ -423,7 +429,7 @@ lista_valores_pares = [valor for valor in lista_uno if (valor % 2 == 0)]
 print(f"Solamente se agregaron los elementos con valor par: {lista_valores_pares}")
 
 
-#EJERCICIO DE COLAS
+# 2.EJERCICIO DE COLAS
 SEPARADOR = ("*" * 20) + "\n"
 cola = list() #Cola utilizando una lista
 for cantidad in range(5):
@@ -440,7 +446,7 @@ while cola:
 pass #Verificar que la estructura se encuentra vacia
 
 
-#Eliminar elementos de un diccionario
+# 3.Eliminar elementos de un diccionario
 print("*" * 20)
 del diccionario_citas["AMLO"]
 print(diccionario_citas)
@@ -458,7 +464,7 @@ pass
 print(list(diccionario_citas.items()))
 
 
-#EJEMPLO LISTAS ALEATORIAS ANIDADAS
+# 4.EJEMPLO LISTAS ALEATORIAS ANIDADAS
 import random
 SEPARADOR = ("*" * 20) + "\n"
 #Creación de una lista con diez valores aleatorios entre 1 y 100
@@ -491,9 +497,9 @@ print(f"El elemento 2,7 es {lista_de_listas[2][7]}")
 #print(lista_de_listas[0,4])#ESTO ES UN ERROR
 
 
+_---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------_
 
-# Ejercicios semana 3
-
+# Ejercicios semana 3 (8)
 # Ejercicio_1
 from multiprocessing import Queue
 import queue
@@ -510,6 +516,7 @@ print("leyendo de queue...")
 while not queue_time.empty():
     time_read = queue_time.get()
     print("%d read from queue" % time_read)
+    
     
 
 # Ejercicio_2 
@@ -543,6 +550,7 @@ print(c.avanzar())
 print(c.avanzar())
 
 
+
 # Ejercicio_3 
 #Crer un menu para colas
 #creamos un alista vacia 
@@ -573,7 +581,7 @@ elif str(option) == "2":
         print("Cola vacia")
         main()
     
- # Esta opción imprime en pantalla la cola
+ #Esta opción imprime en pantalla la cola
 elif str(option) == "3":
      for i in cola:
          print("Cola vacia")
@@ -590,7 +598,35 @@ else:
 main()
 
 
-# Ejercicio_4
+
+# Ejercicio_4 
+#Crear colección de cola y mostrar contenido.
+from collections import deque cola = deque()
+print(cola)
+
+
+
+# Ejercicio_5
+#Crear cola con elementos e imprimirla
+from collections import deque cola = deque()
+print(cola)
+
+cola = deque(['Hector','Juan','Miguel']) print(cola)
+
+
+
+# Ejercicio_6
+#Crear una cola y después agregarle elementos
+from collections import deque cola = deque()
+print(cola)
+
+cola = deque(['Hector','Juan','Miguel']) print(cola)
+
+cola.append('Maria') cola.append('Arnaldo') print(cola)
+
+
+
+# Ejercicio_7
 Crear una cola, imprimirla, después extraer el primer elemento de la izquierda y volver a imprimir la cola
 from collections import deque 
 cola = deque()
@@ -600,7 +636,8 @@ print(cola.popleft())
 print(cola)
 
 
-# Ejercicio_5
+
+# Ejercicio_8
 Crear una clase para representar la estructura de datos cola (queue) usando una lista
 class Cola:
     def init (self): 
@@ -655,8 +692,9 @@ dato = numeros.extraer()
 print(dato) # None
 
    
-# Ejercicios semana 4
-
+_---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------_
+   
+# Ejercicios semana 4 (12)
 # Ejercicio 1
 class Stack: # Creamos la clase Stack def     init (self):
 self.items = []
@@ -767,6 +805,129 @@ while pila_deque:
 pass
 
 
+# Ejercicio 8
+#Creamos una lista vacia stack = []
+
+#Creamos un Menu con 4 opciones 
+def main():
+    print("1 Aplilar elemento (entero)") 
+    print("2 Desapilar elemento") 
+    print("3 Mostrar pila")
+    print("4 Salir")
+    option = input("Elija una opcion: ")
+
+   #Esta opcion permite apilar el numero en la lista 
+   if str(option)=="1":
+         elemento = input(" Introduzca el numero a apilar: ") 
+         stack.append(elemento)
+         print(" Elemento apilado ") 
+         main()
+
+   #Esta opcion saca desapila a partir del ultimo numero ingresado 
+   elif str(option)=="2":
+        if len(stack) == 0:
+           print(" No hay elementos para desapilar ")
+           main()
+        else:
+           print("El numero: ",stack.pop()," fue desapilado") 
+           main()
+
+   #Esta opcion imprime en pantalla la pila 
+   elif str(option)=="3":
+         for i in reversed(range(len(stack))): 
+             print("Pila: ",stack[i])
+         main()
+
+   #Esta opcion permite salir de la ejecucion del codigo 
+   elif str(option)=="4":
+        exit() 
+   else:
+    print("\nOpcion incorrecta.\n") 
+    main()
+
+main()
+
+
+# Ejercicio 9
+letters = []
+#agregar listas 
+letters.append('c') 
+letters.append('a') 
+letters.append('t') 
+letters.append('g')
+
+#Extraer 'g'
+last_item = letters.pop() 
+print(last_item)
+
+#Extraer 't'
+last_item = letters.pop() 
+print(last_item)
+
+#imprimir pila 
+print(letters) #['c', 'a']
+
+
+# Ejercicio Pila (nombre:Pila_imp.py
+class Pila:
+    """ Representa una pila con operaciones de apilar, desapilar y verificar si está vacía. """
+
+def __init__ (self):
+    """ Crea una pila vacía. """
+#La pila vacía se representa con una lista vacía self.items=[]
+
+def apilar(self, x):
+    """ Agrega el elemento x a la pila. """ 
+#Apilar es agregar al final de la lista. self.items.append(x)
+
+def desapilar(self):
+    """ Devuelve el elemento tope y lo elimina de la pila. Si la pila está vacía levanta una excepción. """
+    try:
+        return self.items.pop() 
+    except IndexError:
+        raise ValueError("La pila está vacía")
+
+def es_vacia(self):
+    """ Devuelve True si la lista está vacía, False si no. """ 
+    return self.items == []
+
+def mostrarelementos(self):
+    print ("Los elementos de la pila son: ")
+ 
+    print (self.items)
+    
+   
+# Ejercicio Pila 1
+from Pila_imp import Pila
+
+p = Pila()
+print (p.es_vacia()) 
+p.apilar(1) 
+p.es_vacia() 
+p.apilar(5) 
+p.apilar("+") 
+p.apilar(22)
+print(p.mostrarelementos()) 
+print(p.desapilar()) 
+print(p.mostrarelementos())
+
+
+# Ejercicio Pila 2
+from Pila_imp import Pila 
+p=Pila()
+print(p.es_vacia()) 
+p.apilar(4) 
+p.apilar('perro') 
+print(p.inspeccionar()) 
+p.apilar(True) 
+print(p.tamano()) 
+print(p.es_vacia()) 
+p.apilar(8.4)
+print(p.mostrarelementos()) 
+print(p.desapilar()) 
+print(p.desapilar()) 
+print(p.tamano()) 
+print(p.mostrarelementos())
 
 
 
